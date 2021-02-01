@@ -5,6 +5,16 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{C1DEC1E2-53BC-47FD-A7D1-4898A1D8C28E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3F61143F-0095-4AAB-A739-EE8327FFAB31}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL SCRIPTS", "SQL SCRIPTS", "{2E465B75-E801-4414-841D-05E85AA326FE}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Users\Jozef\Documents\SQL Server Management Studio\Code Snippets\SQL\My Code Snippets\Table creation and proc scripts.sql = ..\..\..\Users\Jozef\Documents\SQL Server Management Studio\Code Snippets\SQL\My Code Snippets\Table creation and proc scripts.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +28,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2E465B75-E801-4414-841D-05E85AA326FE} = {3F61143F-0095-4AAB-A739-EE8327FFAB31}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1FCDCD76-B88E-43B3-8FB9-A5CFFE83571F}
