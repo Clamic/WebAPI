@@ -1,0 +1,18 @@
+.bi.bi-chevron-left {
+    border-radius: 50%;
+    background: linear-gradient(to right, #dddddd 50%, #f5f5f5 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.3s ease-out;
+    &:hover {
+        background-position: left bottom;
+    }
+}
+
+:host {
+    display: block;
+    width: 100%;
+    background: #f5f5f5;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+}

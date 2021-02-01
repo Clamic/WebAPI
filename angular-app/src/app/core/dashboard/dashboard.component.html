@@ -1,0 +1,26 @@
+<h5>Navigation</h5>
+<div class="mb-4 d-flex">
+  <button type="button" class="btn btn-primary mr-2 btn-sm" (click)="navigateTo('clients')">Add or Edit Clients</button>
+  <button type="button" class="btn btn-primary btn-sm" (click)="navigateTo('purchase')">Purchase Products for Clients</button>
+</div>
+<h5>Recent Purchases (View for Task 2 part III)</h5>
+<table class="table table-sm table-striped" *ngIf="invoiceView | async; let invoices">
+  <thead>
+    <tr>
+      <th scope="col">Invoice ID</th>
+      <th scope="col">Invoice Date</th>
+      <th scope="col">Invoice Number</th>
+      <th scope="col">Client ID</th>
+      <th scope="col">Client Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let invoice of invoices">
+      <th scope="row">{{invoice.InvoiceId}}</th>
+      <td>{{invoice.InvoiceDate | date:'dd-MM-YYYY'}}</td>
+      <td>{{invoice.InvoiceNo}}</td>
+      <td>{{invoice.ClientId}}</td>
+      <td>{{invoice.ClientName}}</td>
+    </tr>
+  </tbody>
+</table>

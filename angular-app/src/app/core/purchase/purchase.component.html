@@ -1,0 +1,24 @@
+<form [formGroup]="purchaseForm">
+    <h5>Purchase a product for a client</h5>
+    <div class="mb-4">
+        Product
+        <select class="custom-select custom-select-sm mb-2" formControlName="productAmount">
+            <option *ngFor="let product of mockProducts" [ngValue]="product.price" formGr>{{product?.name + ". Price: $" + product?.price}}</option>
+        </select>
+        Customer
+        <select class="custom-select custom-select-sm mb-2" *ngIf="clientData | async as clients; else loading" formControlName="clientId">
+            <option selected value=""></option>
+            <option *ngFor="let client of clients" [ngValue]="client.ClientId">{{client.FirstName + " " + client.Surname}}</option>
+        </select>
+        Discount %
+        <input [ngClass]="{'is-invalid': !purchaseForm.get('discount')?.valid}" class="form-control" type="number" formControlName="discount">
+    </div>
+    <button [disabled]="!purchaseForm.valid" type="button" class="btn btn-primary btn-sm" (click)="buyProduct()">
+        <div *ngIf="purchasePending" class="spinner-border spinner-border-sm" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        Buy now
+    </button>
+</form>
+
+<ng-template #loading>Loading...</ng-template>
